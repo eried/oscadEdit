@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScintillaNET>
+  <Language Name="oscad">
+    <AutoComplete FillUpCharacters=".([" SingleLineAccept="True" IsCaseSensitive="False">
+      <List>
+        abs acos asin assign atan atan2 ceil circle color cos cube cylinder difference difference dxf_cross dxf_dim echo exp floor for hull import import_dxf import_stl include intersection intersection_for len linear_extrude ln log lookup max min minkowski mirror module multmatrix polygon polyhedron pow projection rands render rotate rotate_extrude round scale search sign sin sphere sqrt square str str surface tan translate union use
+      </List>
+    </AutoComplete>
+
+    <Indentation TabWidth="4" SmartIndentType="cpp" />
+
+    <Lexer LineCommentPrefix="//" StreamCommentPrefix="/* " StreamCommentSuffix=" */" >
+      <Keywords List="0" Inherit="False">
+        abs acos asin assign atan atan2 ceil circle color cos cube cylinder difference difference dxf_cross dxf_dim echo exp floor for hull import import_dxf import_stl include intersection intersection_for len linear_extrude ln log lookup max min minkowski mirror module multmatrix polygon polyhedron pow projection rands render rotate rotate_extrude round scale search sign sin sphere sqrt square str str surface tan translate union use
+      </Keywords>
+      <Keywords List="1" Inherit="False">        
+      </Keywords>
+    </Lexer>
+    
+<Snippets>
+
+<Snippet Shortcut="module">
+module $modulname$($variables$)
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="difference" IsSurroundsWith="True">
+difference()
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="union" IsSurroundsWith="True">
+union()
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="intersection" IsSurroundsWith="True">
+intersection()
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="intersection_for" IsSurroundsWith="true">
+intersection_for($variablename$ = [$start$ : $end$])
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="rotate" IsSurroundsWith="true">
+rotate([$x$,$y$,$z$])
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="translate" IsSurroundsWith="true">
+translate([$x$,$y$,$z$])
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="scale" IsSurroundsWith="true">
+scale([$x$,$y$,$z$])
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="mirror" IsSurroundsWith="true">
+mirror([$x$,$y$,$z$])
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="color" IsSurroundsWith="true">
+color([$r$,$g$,$b$,$a$])
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="minkowski" IsSurroundsWith="true">
+minkowski()
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="hull" IsSurroundsWith="true">
+hull()
+{
+$end$
+}
+</Snippet>
+
+<Snippet Shortcut="union" IsSurroundsWith="true">
+union()
+{
+$end$
+}
+</Snippet>           
+      
+<Snippet Shortcut="include" IsSurroundsWith="true">
+include &lt;$file$&gt;$end$
+</Snippet>
+
+<Snippet Shortcut="cylinder" IsSurroundsWith="true">
+cylinder(h=$height$, r=$radius$, center=$bool$);$end$
+</Snippet>
+
+<Snippet Shortcut="dxf_cross" IsSurroundsWith="true">
+$destpoint$ = dxf_cross(file="$filename$.dxf", layer="$layername$", origin=[0, 0], scale=1);
+</Snippet>
+
+<Snippet Shortcut="dxf_dim" IsSurroundsWith="true">
+$width$ = dxf_dim(file="$filename$.dxf", name="$name$", layer="$layername$", origin=[0, 0], scale=1);
+</Snippet>
+
+<Snippet Shortcut="if" IsSurroundsWith="true">
+if ($statement$)
+{
+$end$$selected$
+}
+</Snippet>
+
+</Snippets>
+  </Language>
+</ScintillaNET>
